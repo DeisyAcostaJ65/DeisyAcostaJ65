@@ -109,75 +109,78 @@
         
 
                 
-
-                <li class="menu-vert" id="https://deisyacostaj65.github.io/documentacion/configtemas/">
-                    <a href="#https%3a%2f%2fdeisyacostaj65.github.io%2fdocumentacion%2fconfigtemas%2f">Configuración de Temas</a>
-
-                    <ul class="submenu-vert-level">
-                        <li class="submenu-vert">
-                            <a href="https://deisyacostaj65.github.io/documentacion/configtemas/readme_themezero/">Crear un tema desde cero</a>
+                    
+                    <li class="menu-vert" id="https://deisyacostaj65.github.io/documentacion/configtemas/">
+                        <a href="#https%3a%2f%2fdeisyacostaj65.github.io%2fdocumentacion%2fconfigtemas%2f">Configuración de Temas</a>
+                        
+                        <ul class="submenu-vert-level">
+                            <li class="submenu-vert">
+                                <a href="https://deisyacostaj65.github.io/documentacion/configtemas/readme_themezero/">Crear un tema desde cero</a>
+                                
+                            </li>
                             
-                        </li>
-                        
-                        <li class="submenu-vert">
-                            <a href="https://deisyacostaj65.github.io/documentacion/configtemas/readme_copytheme/">¿Cómo añadir un tema y configurarlo?</a>
+                            <li class="submenu-vert">
+                                <a href="https://deisyacostaj65.github.io/documentacion/configtemas/readme_copytheme/">¿Cómo añadir un tema y configurarlo?</a>
+                                
+                            </li>
                             
-                        </li>
-                        
-                        
-                    </ul>
-
-                </li>
-                
-
-        
-
-                
-
-        
-
-                
-
-        
-
-                
-
-        
-
-                
-
-                <li class="menu-vert" id="https://deisyacostaj65.github.io/documentacion/layout/">
-                    <a href="#https%3a%2f%2fdeisyacostaj65.github.io%2fdocumentacion%2flayout%2f">Layouts</a>
-
-                    <ul class="submenu-vert-level">
-                        
-                    </ul>
-
-                </li>
-                
-
-        
-
-                
-
-                <li class="menu-vert" id="https://deisyacostaj65.github.io/documentacion/shortcodes/">
-                    <a href="#https%3a%2f%2fdeisyacostaj65.github.io%2fdocumentacion%2fshortcodes%2f">Shortcodes </a>
-
-                    <ul class="submenu-vert-level">
-                        <li class="submenu-vert">
-                            <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/visualizararchivos/">Visualizar Archivos</a>
                             
-                        </li>
+                        </ul>
                         
-                        <li class="submenu-vert">
-                            <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/referenciardoc/">Referenciacion de páginas</a>
-                            
-                        </li>
-                        
-                        
-                    </ul>
+                    </li>
+                    
+                
 
-                </li>
+        
+
+                
+
+        
+
+                
+
+        
+
+                
+
+        
+
+                
+                    
+                    <li class="menu-vert" id="https://deisyacostaj65.github.io/documentacion/layout/">
+                        <a href="#https%3a%2f%2fdeisyacostaj65.github.io%2fdocumentacion%2flayout%2f">Layouts</a>
+                        
+                        <ul class="submenu-vert-level">
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                
+
+        
+
+                
+                    
+                    <li class="menu-vert" id="https://deisyacostaj65.github.io/documentacion/shortcodes/">
+                        <a href="#https%3a%2f%2fdeisyacostaj65.github.io%2fdocumentacion%2fshortcodes%2f">Shortcodes </a>
+                        
+                        <ul class="submenu-vert-level">
+                            <li class="submenu-vert">
+                                <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/visualizararchivos/">Visualizar Archivos</a>
+                                
+                            </li>
+                            
+                            <li class="submenu-vert">
+                                <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/referenciardoc/">Referenciacion de páginas</a>
+                                
+                            </li>
+                            
+                            
+                        </ul>
+                        
+                    </li>
+                    
                 
 
         
@@ -209,6 +212,27 @@
 
 
 
+<p>La distribución de los ficheros se muestra a contiuación:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">|--archetypes
+|--content
+|--data
+|--public
+|--resources
+|--themes
+|--config.toml
+</code></pre></div><h2 id="ficheros">Ficheros</h2>
+<p><strong>archetypes:</strong> Almacena plantillas de Markdown para usarse en el contenido.</p>
+<p><strong>content:</strong> Archivos con el contenido ordenado en carpetas que se mostrará en el sitio público. El contenido puede estar en formato markdown (archivos .md) o directamente en formato HTML.</p>
+<p><strong>data:</strong> Contenido adicional para incluir en el sitio web. Esta carpeta contiene archivos en formato TOML, YAML, JSON, incluso CSV u otros, y constituye una especie de base de datos de contenido estructurado y accesible a través de un sistema de objetos y propiedades. Este contenido adicional también puede estar almacenado en content.</p>
+<p><strong>public:</strong> Contienen el sitio web listo para publicar generado a partir del contenido de /content, los archivos estáticos de /static y según las reglas y las plantillas definidas en el resto de carpetas de Hugo.</p>
+<p><strong>resources:</strong> Este contiene varios activos como estilos y scripts.</p>
+<p><strong>themes:</strong> Almacena los temas y estilos de la página estática.</p>
+<p><strong>config.toml:</strong> Archivo de configuración de Hugo. Puede estar en formato TOML, YAML y JSON.</p>
+<h1 id="referencias">Referencias:</h1>
+<ul>
+<li><a href="https://www.sitepoint.com/premium/books/a-beginner-s-guide-to-creating-a-static-website-with-hugo/read/1/">A Beginner’s Guide to Creating a Static Website with Hugo</a></li>
+<li><a href="https://voragine.net/weblogs/hugo-guia-rapida">GUÍA RÁPIDA PARA CREAR UN SITIO WEB CON HUGO</a></li>
+</ul>
 
                 
             </main>
