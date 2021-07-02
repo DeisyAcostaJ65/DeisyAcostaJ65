@@ -9,14 +9,9 @@ html{
     display:flex;
     justify-content:baseline;
     background-color:rgb(50,50,50);
-    height:max-content;
-    margin: 0;
-    padding: 0;
 }
 
 .imagen-head1{
-    padding: 0;
-    margin: 0;
     width: 17%;
     order:1;
     margin-left: 2rem;
@@ -33,10 +28,9 @@ html{
 
 .titulo-principal a h1{
 
-    color: rgb(239, 255, 252);
+    color: rgb(232, 252, 248);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 3rem;
-    padding-top: 0.7rem;
+    font-size: 3.5rem;
 
 }
 
@@ -50,7 +44,7 @@ html{
 
 /**Layout body*/
 body {
-    background-color: white;
+    background-color: rgb(245,245,245);
     line-height: 1.5; /*Interlineado*/
     margin: 0 auto;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -66,19 +60,16 @@ body {
 
     /*color:rgb(44, 44, 44);*/
     text-decoration: none; /*Link no subrayado*/
-    border-right-color: rgb(50, 50, 50);
+    border-right-color: rgb(60, 60, 60);
     border-right-width: 0.1rem;
     border-right-style: solid;
-    background-color: white;
+    min-width: 17%;
     margin: 0;  
     order: 0;
-    min-width: 20%;
-    max-width: 25%;
     
 }
 
 .contenido-principal{
-    background-color: inherit;
     color:rgb(40, 40, 40);
     text-align: justify;
     order: 1;
@@ -88,6 +79,15 @@ body {
     padding: 2rem;
     text-align: justify;
 }
+
+.content h1 {
+    text-transform: capitalize;
+}
+
+.content h3 {
+    text-transform: capitalize;
+}
+
 /**Layout footer*/
 footer {
 

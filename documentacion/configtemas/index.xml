@@ -13,9 +13,8 @@
       <pubDate>Tue, 25 May 2021 12:09:35 -0500</pubDate>
       
       <guid>https://deisyacostaj65.github.io/documentacion/configtemas/readme_themezero/</guid>
-      <description>¿Cómo crear un tema ? Para empezar crear un tema se debe usar el comando:
-hugo new theme &amp;lt;Nombre_del_tema&amp;gt;
-Este comando creará una carpeta con el nombre deseado en la carpeta themes con los siquientes directorios
+      <description>Para empezar crear un tema se debe usar el comando:
+hugo new theme &amp;lt;Nombre_del_tema&amp;gt; Este comando creará una carpeta con el nombre deseado en la carpeta themes con los siquientes directorios
 |--themes |--&amp;lt;Nombre_del_tema&amp;gt; |--archetypes |--layouts |--static |--LICENSE |--theme.config De los cuales archetypes layouts y static corresponden a carpetas.
 Archetypes El primero archetypes, corresponde a una carpeta donde se alojarán plantillas del forntmatter de los markdown que se creen más adelante.</description>
     </item>
@@ -27,7 +26,7 @@ Archetypes El primero archetypes, corresponde a una carpeta donde se alojarán p
       
       <guid>https://deisyacostaj65.github.io/documentacion/configtemas/readme_copytheme/</guid>
       <description>En primer lugar se debe instalar Hugo, donde se debe tener en cuenta que hay que tener la versión &amp;ldquo;extendida&amp;rdquo; Sass/SCSS de Hugo con el siguiente comando:
- choco install hugo-extended -confirmSi no tiene Windows, puede revisar la página oficial de Hugo para las respectivas instalaciones: (Instalar Hugo)
+choco install hugo-extended -confirm Si no tiene Windows, puede revisar la página oficial de Hugo para las respectivas instalaciones: Instalar Hugo
 Ahora si, volviendo a los temas:
 Estos permiten crear un sitio web con un aspecto atractivo y de manera más sencilla. El sitio web de Hugo cuenta con una sección completamente dedicada a temas, con muchas alternativas interesantes y adaptables a todo tipo de proyecto.</description>
     </item>
