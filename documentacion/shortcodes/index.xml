@@ -20,6 +20,17 @@ Parametros alt: Corresponde a una palabra o frase a la cual irá ligada el archi
     </item>
     
     <item>
+      <title>Diagramas con Mermaid</title>
+      <link>https://deisyacostaj65.github.io/documentacion/shortcodes/diagramasdoc/</link>
+      <pubDate>Tue, 25 May 2021 12:09:35 -0500</pubDate>
+      
+      <guid>https://deisyacostaj65.github.io/documentacion/shortcodes/diagramasdoc/</guid>
+      <description>Mermaid es una herramienta que permite crear diferentes tipos de diagramas y gráficos usando texto y código de manera sencilla por su lenguaje similar al formato MarkDown.
+Para poner toda la información del diagrama, se crea un archivo .html y se incluyen los siguientes comandos para inicializar mermaid:
+&amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; mermaid.initialize({startOnLoad:true}); &amp;lt;/script&amp;gt; Lo siguiente es agrupar el contenido donde se va a crear el diagrama, se tiene que especificar el tipo de gráfico que se va a realizar para luego agregar la información de este.</description>
+    </item>
+    
+    <item>
       <title>Referenciacion de páginas</title>
       <link>https://deisyacostaj65.github.io/documentacion/shortcodes/referenciardoc/</link>
       <pubDate>Tue, 25 May 2021 12:09:35 -0500</pubDate>

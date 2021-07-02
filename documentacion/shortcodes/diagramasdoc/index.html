@@ -220,199 +220,73 @@
 
         <div class="cotenido-principal">
             <main class="content">
-                <h1>Visualizar Archivos</h1>
-                <p>Esta función ayuda a visualizar archivos de cualquier tipo, que pueda contener código u otro tipo de contenido que no sea imagen, tal como:</p>
-<ul>
-<li>JSON</li>
-<li>YAML</li>
-<li>TXT</li>
-<li>CSV</li>
-</ul>
-<p>La estructura de la función se muestra a continuación:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
-    <span style="color:#f92672">{{</span> &lt; dataDetails alt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;nombre&gt;&#34;</span> url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;&gt;&#34;</span> &gt; <span style="color:#f92672">}}</span>
+                <h1>Diagramas con Mermaid</h1>
+                <p>Mermaid es una herramienta que permite crear diferentes tipos de diagramas y gráficos usando texto y código de manera sencilla por su lenguaje similar al formato MarkDown.</p>
+<p>Para poner toda la información del diagrama, se crea un archivo .html y se incluyen los siguientes comandos para inicializar mermaid:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&lt;script src<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js&#34;</span>&gt;&lt;/script&gt;
+&lt;script&gt; mermaid.initialize<span style="color:#f92672">({</span>startOnLoad:true<span style="color:#f92672">})</span>; &lt;/script&gt;
+</code></pre></div><p>Lo siguiente es agrupar el contenido donde se va a crear el diagrama, se tiene que especificar el tipo de gráfico que se va a realizar para luego agregar la información de este.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&lt;div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mermaid&#34;</span>&gt;
 
-</code></pre></div><p>Se aclara que los símbolos <code>{{</code>, <code>&lt;</code>, <code>&gt;</code>, <code>}}</code> no deben tener espacios entre sí.</p>
-<h3 id="parametros">Parametros</h3>
-<p><strong>alt:</strong> Corresponde a una palabra o frase a la cual irá ligada el archivo, puede ser el nombre del mismo.</p>
-<p><strong>url:</strong> Corresponde a la ruta relativa donde se ubica el archivo que se quiere visualizar.</p>
-<p>Esta función genera una widget de revelación a través del cual el usuario puede obtener información adicional, siendo el contenido del archivo lo que se visualiza; además cuenta con un icono para descargar el archivo si lo desea el usuario.</p>
-<p>Se tomará como ejemplo el siguiente directorio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">|--documentacion
-    |--configtemas
-        |--_index.md
-        |--README_CopyTheme.md
-        |--README_themeZero.md
-
-    |--images
-        |--hugo_logo.png
-
-    |--layout
-        |--data
-            |--html
-                |--ejemplo.html
-            |--json
-                |--marcadores1.json
-        |--_index.md
-
-    |--shortcodes
-        |--data
-            |--json
-                |--colores1.json
-            |--text
-                |--marcadores.txt
-            |--yaml
-                |--discography.yaml
-        |--_index.md
-        |--referenciarDoc.md
-        |--visualizarArchivos.md
-</code></pre></div><p>Si nos encontramos ubicados en el archivo &ldquo;_index.md&rdquo; del directorio &ldquo;shortcodes&rdquo; y queremos visualizar el archivo &ldquo;colores1.json&rdquo; ubicado en la ruta &ldquo;data/json&rdquo; del mismo directorio, basta con citar el archivo indicando la ruta, dado a que nos encontramos en el mismo directorio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
-    <span style="color:#f92672">{{</span> &lt; dataDetails alt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colores 1&#34;</span> url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;data/json/colores1.json&#34;</span> &gt; <span style="color:#f92672">}}</span>
-
-</code></pre></div><p>A continuación se observa la ejecución de la función:</p>
-<p>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-<section class="shortcode__Details">
-    <details class="shortcode_ClassDetails">
-        <summary class="shortcodeDetails_text">
-            colores 1
-        </summary>
-
-        <a style="text-decoration: none;" href="../../../documentacion/shortcodes/data/json/colores1.json" download>
-            <div>
-            
-                <div class="icon">
-                    <img src="../../../icons/png/json.png">
-                </div>
-        
-                <div class="text_icon">
-                    <h3>Descargar colores 1</h3>
-                </div>
-
-            </div>
-        </a>
-
-        <div class="shortcodeDetails_file">
-            <pre>
-                <code>
-                    {
-    &#34;arrayColores&#34;: [
-        {
-            &#34;nombreColor&#34;: &#34;rojo&#34;,
-            &#34;valorHexadec&#34;: &#34;#f00&#34;
-        },
-        {
-            &#34;nombreColor&#34;: &#34;verde&#34;,
-            &#34;valorHexadec&#34;: &#34;#0f0&#34;
-        },
-        {
-            &#34;nombreColor&#34;: &#34;azul&#34;,
-            &#34;valorHexadec&#34;: &#34;#00f&#34;
-        },
-        {
-            &#34;nombreColor&#34;: &#34;cyan&#34;,
-            &#34;valorHexadec&#34;: &#34;#0ff&#34;
-        },
-        {
-            &#34;nombreColor&#34;: &#34;magenta&#34;,
-            &#34;valorHexadec&#34;: &#34;#f0f&#34;
-        },
-        {
-            &#34;nombreColor&#34;: &#34;amarillo&#34;,
-            &#34;valorHexadec&#34;: &#34;#ff0&#34;
-        },
-        {
-            &#34;nombreColor&#34;: &#34;negro&#34;,
-            &#34;valorHexadec&#34;: &#34;#000&#34;
-        }
-    ]
-}     
-                </code>
-            </pre>
-        </div>
-
-    </details>
-</section>
-</br>
-Por otro lado, si nos encontramos ubicados en el mismo archivo &ldquo;_index.md&rdquo; del directorio &ldquo;shortcodes&rdquo; y queremos visualizar el archivo &ldquo;ejemplo.html&rdquo; ubicado en el directorio &ldquo;layout&rdquo; en la ruta &ldquo;layout/data/html/ejemplo.html&rdquo;, se debe poner &ldquo;../&rdquo; ó &ldquo;/&rdquo; antes de la ruta para que la función pueda hacer la busqueda en directorios de más alto nivel. Si se desea retrodecer más de un nivel, se debe poner &ldquo;../&rdquo; el número de niveles a retornar.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
-    <span style="color:#f92672">{{</span> &lt; dataDetails alt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Ejemplo HTML&#34;</span> url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;../layout/data/html/ejemplo.html&#34;</span> &gt; <span style="color:#f92672">}}</span>
-    
-</code></pre></div><p>A continuación se observa la ejecución de la función:</p>
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-<section class="shortcode__Details">
-    <details class="shortcode_ClassDetails">
-        <summary class="shortcodeDetails_text">
-            Ejemplo HTML
-        </summary>
-
-        <a style="text-decoration: none;" href="../../../documentacion/layout/data/html/ejemplo.html" download>
-            <div>
-            
-                <div class="icon">
-                    <img src="../../../icons/png/html.png">
-                </div>
-        
-                <div class="text_icon">
-                    <h3>Descargar Ejemplo HTML</h3>
-                </div>
-
-            </div>
-        </a>
-
-        <div class="shortcodeDetails_file">
-            <pre>
-                <code>
-                    &lt;html&gt;
-	&lt;head&gt;
-		&lt;title&gt;Mi página de ejemplo&lt;/title&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-	Aquí va el contenido
-	&lt;/body&gt;
-&lt;/html&gt;     
-                </code>
-            </pre>
-        </div>
-
-    </details>
-</section>
-</br>
-<h2 id="referencias">Referencias:</h2>
-<ul>
-<li>
-<p><a href="https://co.godaddy.com/blog/10-codigos-html-para-paginas-web-y-para-que-sirven/">Ejemplos HTML</a></p>
-</li>
-<li>
-<p><a href="https://www.aprenderaprogramar.com/index.php?option=com_content&amp;view=article&amp;id=957:ejemplos-json-archivo-datos-cambio-formato-convertidor-on-line-xml-a-json-y-al-reves-minificar-cu01214f&amp;catid=83&amp;Itemid=212">Ejemplos JSON</a></p>
-</li>
-</ul>
+    comando tipo de gráfico
+              
+&lt;/div&gt;
+</code></pre></div><p>Hay diferentes tipos de gráficos :</p>
+<table>
+<thead>
+<tr>
+<th>Tipo de gráfico</th>
+<th>Comando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Diagrama de flujo de abajo a arriba</td>
+<td>graph TB</td>
+</tr>
+<tr>
+<td>Diagrama de flujo de arriba a abajo</td>
+<td>graph BT</td>
+</tr>
+<tr>
+<td>Diagrama de flujo de derecha a izquierda</td>
+<td>graph RL</td>
+</tr>
+<tr>
+<td>Diagrama de flujo de izquierda a derecha</td>
+<td>graph LR</td>
+</tr>
+<tr>
+<td>Diagrama de Gantt</td>
+<td>gantt</td>
+</tr>
+<tr>
+<td>Diagrama de Clase</td>
+<td>classDiagram</td>
+</tr>
+<tr>
+<td>Gráfico de Git</td>
+<td>gitGraph:</td>
+</tr>
+<tr>
+<td>Diagrama de viaje del usuario</td>
+<td>journey</td>
+</tr>
+<tr>
+<td>Diagramas de secuencia</td>
+<td>sequenceDiagram</td>
+</tr>
+<tr>
+<td>Diagramas de gráfico circular</td>
+<td>pieS</td>
+</tr>
+</tbody>
+</table>
+<p>Para tener la información más detallada sobre como seguir editando los diagramas, puede encontrar mayor información en este <a href="https://mermaid-js.github.io/mermaid/#/">link</a></p>
+<p>Tengo que resaltar que los diagramas se pueden editar tambien en cuanto a cambio de colores, tamaños, incluir links, entre otras acciones.</p>
+<p>Despues de tener el archivo html con el diagrama finalizado, bastará con ser &ldquo;llamado&rdquo; en un archivo MarkDown para poder ser visualizado de la sigueinte manera:</p>
+<p>{{&lt; NombreArchivoHTML &gt;}}</p>
+<p>Tambien tiene disponible un <a href="https://mermaid-js.github.io/mermaid-live-editor/edit#eyJjb2RlIjoiZ3JhcGggVERcbiAgICBBW0NocmlzdG1hc10gLS0-fEdldCBtb25leXwgQihHbyBzaG9wcGluZylcbiAgICBCIC0tPiBDe0xldCBtZSB0aGlua31cbiAgICBDIC0tPnxPbmV8IERbTGFwdG9wXVxuICAgIEMgLS0-fFR3b3wgRVtpUGhvbmVdXG4gICAgQyAtLT58VGhyZWV8IEZbZmE6ZmEtY2FyIENhcl1cbiAgIiwibWVybWFpZCI6IntcbiAgXCJ0aGVtZVwiOiBcImRlZmF1bHRcIlxufSIsInVwZGF0ZUVkaXRvciI6dHJ1ZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOnRydWV9">editor en línea</a>. para crear tus propios diagramas e ir visualizandolos en el proceso.</p>
 
                 
             </main>
