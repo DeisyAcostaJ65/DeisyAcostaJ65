@@ -7,5 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 04 May 2021 16:55:28 -0500</lastBuildDate><atom:link href="https://deisyacostaj65.github.io/documentacion/pipeline/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pipeline con Azure DevOps</title>
+      <link>https://deisyacostaj65.github.io/documentacion/pipeline/azure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://deisyacostaj65.github.io/documentacion/pipeline/azure/</guid>
+      <description>Esta es una herramienta de Microsoft que cuenta con diversos servicios para trabajar con la metodología de DevOps. Para el caso de Coolibri se hace uso de Azure Repos y Azure Pipelines. A continuación se muestra el flujo que sigue el pipeline desde que se hace commit en la rama main hasta su despliegue.
+Como primer paso se almacena el repositorio de git usando azure repo. Es importante resaltar que, dado que sue hace uso de un proyecto de git se deben seguir las prácticas de gitflow para agregar nuevos commits.</description>
+    </item>
+    
   </channel>
 </rss>
