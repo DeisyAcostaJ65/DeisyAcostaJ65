@@ -105,7 +105,6 @@
         
 
                 
-
         
 
                 
@@ -117,51 +116,27 @@
                             <li class="submenu-vert">
                                 <a href="https://deisyacostaj65.github.io/documentacion/configtemas/readme_themezero/">Crear un tema desde cero</a>
                                 
-                            </li>
-                            
-                            <li class="submenu-vert">
+                            </li><li class="submenu-vert">
                                 <a href="https://deisyacostaj65.github.io/documentacion/configtemas/readme_copytheme/">¿Cómo añadir un tema y configurarlo?</a>
                                 
                             </li>
-                            
-                            
                         </ul>
                         
                     </li>
                     
                 
-
         
 
                 
-
         
 
                 
-
         
 
                 
-
         
 
                 
-
-        
-
-                
-                    
-                    <li class="menu-vert" id="https://deisyacostaj65.github.io/documentacion/layout/">
-                        <a href="https://deisyacostaj65.github.io/documentacion/layout/">Layouts</a>
-                        
-                        <ul class="submenu-vert-level">
-                            
-                        </ul>
-                        
-                    </li>
-                    
-                
-
         
 
                 
@@ -173,53 +148,35 @@
                             <li class="submenu-vert">
                                 <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/visualizararchivos/">Visualizar Archivos</a>
                                 
-                            </li>
-                            
-                            <li class="submenu-vert">
+                            </li><li class="submenu-vert">
                                 <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/diagramasdoc/">Diagramas con Mermaid</a>
                                 
-                            </li>
-                            
-                            <li class="submenu-vert">
+                            </li><li class="submenu-vert">
                                 <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/referenciardoc/">Referenciacion de páginas</a>
                                 
                             </li>
-                            
-                            
                         </ul>
                         
                     </li>
                     
                 
+        
 
+                
         
 
                 
                     
                     <li class="menu-vert" id="https://deisyacostaj65.github.io/documentacion/pipeline/">
-                        <a href="https://deisyacostaj65.github.io/documentacion/pipeline/">Despliegue-Pipeline</a>
+                        <a href="https://deisyacostaj65.github.io/documentacion/pipeline/">Pipeline con Azure DevOps</a>
                         
                         <ul class="submenu-vert-level">
-                            <li class="submenu-vert">
-                                <a href="https://deisyacostaj65.github.io/documentacion/pipeline/azure/">Pipeline con Azure DevOps</a>
-                                
-                            </li>
-                            
                             
                         </ul>
                         
                     </li>
                     
                 
-
-        
-
-                
-
-        
-
-                
-
         
         </ul>
 
@@ -230,13 +187,22 @@
         <div class="cotenido-principal">
             <main class="content">
                 <h1>¿Cómo añadir un tema y configurarlo?</h1>
-                <p>En primer lugar se debe instalar Hugo, donde se debe tener en cuenta que hay que tener la versión &ldquo;extendida&rdquo; Sass/SCSS de Hugo con el siguiente comando:</p>
+                <p>En primer lugar, se debe instalar Hugo. A continuación se muestra las opciones de instalación para Windows.</p>
+<h3 id="chocolatey">Chocolatey:</h3>
+<p>Si cuenta con el gestor de paquetes <strong><a href="https://chocolatey.org/install">Chocolatey</a></strong>, puede instalar Hugo con la siguiente línea de comando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    choco install hugo -confirm
+</code></pre></div><p>O si usará archivos Sass/SCSS requiere la versión extendida:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    choco install hugo-extended -confirm
-</code></pre></div><p>Si no tiene Windows, puede revisar la página oficial de Hugo para las respectivas instalaciones:
+</code></pre></div><h3 id="scoop">Scoop</h3>
+<p>Si cuenta con el gestor de paquetes <strong><a href="https://scoop.sh">Scoop</a></strong>, puede instalar Hugo con la siguiente línea de comando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    scoop install hugo
+</code></pre></div><p>O si usará archivos Sass/SCSS requiere la versión extendida:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    scoop install hugo-extended
+</code></pre></div><p><em><strong>Si no tiene Windows</strong></em>, puede revisar la página oficial de Hugo para las respectivas instalaciones:
 <strong><a href="https://gohugo.io/getting-started/installing/">Instalar Hugo</a></strong></p>
-<p>Ahora si, volviendo a los temas:</p>
+<h2 id="ahora-si-volviendo-a-los-temas">Ahora si, volviendo a los temas:</h2>
 <p>Estos permiten crear un sitio web con un aspecto atractivo y de manera más sencilla. El sitio web de Hugo cuenta con una sección completamente dedicada a temas, con muchas alternativas interesantes y adaptables a todo tipo de proyecto. <strong><a href="https://themes.gohugo.io/">Ingresar temas Hugo!!!</a></strong></p>
-<p>El presente repositorio cuenta con un tema, el cuál es una plantilla base para Bancolombia que puede usar en su archivo raiz. Esta plantilla se encuentra dentro de la carpeta llamada <code>vertical_nav</code> cuya ruta es <code>themes/vertical_nav</code></p>
+<p>El presente repositorio cuenta con un tema, el cuál es una plantilla base que puede usar en su archivo raiz. Esta plantilla se encuentra dentro de la carpeta llamada <code>vertical_nav</code> cuya ruta es <code>themes/vertical_nav</code></p>
 <p>Para agregar un tema hay dos métodos:</p>
 <ol>
 <li>
@@ -251,7 +217,7 @@
 <p>Método submodule</p>
 <p>Estando en la carpeta raíz del proyecto, se ejecuta lo siguiente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    git submodule add &lt;ssh/https url github&gt; themes/&lt;nombre nuevo tema&gt; 
-</code></pre></div><p>Este método no se recomienda ya que copia la subcarpeta al repositorio vacía, copiando solo al archivo localmente.</p>
+</code></pre></div><p>Este método no se recomienda ya que copia la subcarpeta al repositorio vacía, copiando solo el archivo localmente.</p>
 </li>
 <li>
 <p>Método clone</p>
@@ -272,11 +238,15 @@
     ---
 </code></pre></div><p>Para crear un nuevo Post se debe ejecutar el siguiente comando en el directorio raíz:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    hugo new content/&lt;nombre&gt;.md 
-</code></pre></div><p>Observará un nuevo archivo markdown con el nombre que se asignó donde se deben agregar las siguientes lineas en la parte superior e inferior del código, en el caso de no contenerlas:</p>
+</code></pre></div><p>Observará un nuevo archivo markdown con el nombre que se asignó donde se deben agregar las siguientes lineas en el encabezado, en el caso de no contenerlas:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    ---
     title: <span style="color:#e6db74">&#34;&lt;Nombre deseado&gt;&#34;</span>
     date: 2021-04-22T00:22:40-05:00  <span style="color:#75715e">#Actualizar fecha</span>
     draft: false
+    type: <span style="color:#e6db74">&#34;&lt;Tipo de plantilla a usar para visualizar el contenido del markdown&gt;&#34;</span> 
+            <span style="color:#75715e">#Puede ser _default, without-menu para el tema vertical-nav</span>
+    layout: <span style="color:#e6db74">&#34;&lt;Plantilla html específica a usar para visualizar el contenido del markdown&gt;&#34;</span>
+            <span style="color:#75715e">#Revisar themes/vertical-nav/layouts, el cual cuenta con diferentes opciones </span>
     ---
 </code></pre></div><p>Teniendo en cuenta que si el draft esta en &ldquo;false&rdquo; la página se va a actualizar automaticamente sin la necesidad de ejecutar códigos de hugo para construir la página.</p>
 <p>Ya para ejecutar la página y poder visualizarla junto con el tema seleccionado, se ejecuta el siguiente comando:</p>

@@ -105,7 +105,6 @@
         
 
                 
-
         
 
                 
@@ -117,51 +116,27 @@
                             <li class="submenu-vert">
                                 <a href="https://deisyacostaj65.github.io/documentacion/configtemas/readme_themezero/">Crear un tema desde cero</a>
                                 
-                            </li>
-                            
-                            <li class="submenu-vert">
+                            </li><li class="submenu-vert">
                                 <a href="https://deisyacostaj65.github.io/documentacion/configtemas/readme_copytheme/">¿Cómo añadir un tema y configurarlo?</a>
                                 
                             </li>
-                            
-                            
                         </ul>
                         
                     </li>
                     
                 
-
         
 
                 
-
         
 
                 
-
         
 
                 
-
         
 
                 
-
-        
-
-                
-                    
-                    <li class="menu-vert" id="https://deisyacostaj65.github.io/documentacion/layout/">
-                        <a href="https://deisyacostaj65.github.io/documentacion/layout/">Layouts</a>
-                        
-                        <ul class="submenu-vert-level">
-                            
-                        </ul>
-                        
-                    </li>
-                    
-                
-
         
 
                 
@@ -173,53 +148,35 @@
                             <li class="submenu-vert">
                                 <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/visualizararchivos/">Visualizar Archivos</a>
                                 
-                            </li>
-                            
-                            <li class="submenu-vert">
+                            </li><li class="submenu-vert">
                                 <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/diagramasdoc/">Diagramas con Mermaid</a>
                                 
-                            </li>
-                            
-                            <li class="submenu-vert">
+                            </li><li class="submenu-vert">
                                 <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/referenciardoc/">Referenciacion de páginas</a>
                                 
                             </li>
-                            
-                            
                         </ul>
                         
                     </li>
                     
                 
+        
 
+                
         
 
                 
                     
                     <li class="menu-vert" id="https://deisyacostaj65.github.io/documentacion/pipeline/">
-                        <a href="https://deisyacostaj65.github.io/documentacion/pipeline/">Despliegue-Pipeline</a>
+                        <a href="https://deisyacostaj65.github.io/documentacion/pipeline/">Pipeline con Azure DevOps</a>
                         
                         <ul class="submenu-vert-level">
-                            <li class="submenu-vert">
-                                <a href="https://deisyacostaj65.github.io/documentacion/pipeline/azure/">Pipeline con Azure DevOps</a>
-                                
-                            </li>
-                            
                             
                         </ul>
                         
                     </li>
                     
                 
-
-        
-
-                
-
-        
-
-                
-
         
         </ul>
 
@@ -240,7 +197,7 @@
       |--static
       |--LICENSE
       |--theme.config
-</code></pre></div><p>De los cuales archetypes layouts y static corresponden a carpetas.</p>
+</code></pre></div><p>De los cuales archetypes, layouts y static corresponden a carpetas.</p>
 <h2 id="archetypes">Archetypes</h2>
 <p>El primero archetypes, corresponde a una carpeta donde se alojarán plantillas del forntmatter de los markdown que se creen más adelante.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">---
@@ -263,10 +220,11 @@ usuario.</p>
       |--header.html
    |--404.html
    |--index.html
-</code></pre></div><p>En la carpeta &ldquo;_default&rdquo; se encontrarán los archivos de los layouts basicos a usar en las páginas que se creen; en la carpeta de partials se tiene aquellos partes del html que se pueden visualizar en varias paginas, y por último se tienen archivos 404 que es para las paginas que no se encuentran, y index en el cual se puede definir el home de la pagina web.</p>
+</code></pre></div><h3 id="_default">_default</h3>
+<p>En la carpeta &ldquo;_default&rdquo; se encontrarán los archivos de los layouts basicos a usar en las páginas que se creen; en la carpeta de partials se tiene aquellos partes del html que se pueden visualizar en varias paginas, y por último se tienen archivos 404 que es para las paginas que no se encuentran, y index en el cual se puede definir el home de la pagina web.</p>
 <ul>
 <li>
-<h3 id="baseof">Baseof</h3>
+<h4 id="baseof">Baseof</h4>
 <p>Entendiendo como funciona el baseof, al abrirlo se puede observar la siguiente estructura.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -282,7 +240,7 @@ usuario.</p>
 </code></pre></div><p>Esta estructura funciona como una base de todas las paginas que se pueden hacer a futuro. Se observa que hace un llamado a los partials head,header y footer, segun como es la estructura de una pagina html. Adicionalmente, se observa que hay un block definido como main en la parte de contenido, la función de este block es que este se pueda definir en otras layouts como el de single o list.</p>
 </li>
 <li>
-<h3 id="single">Single</h3>
+<h4 id="single">Single</h4>
 <p>Para manejar una pagina que funcione como una sola se puede usar la siguiente plantilla.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">{{</span> define <span style="color:#e6db74">&#34;main&#34;</span> <span style="color:#f92672">}}</span>
 &lt;main class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;content&#34;</span>&gt;
@@ -292,7 +250,7 @@ usuario.</p>
 </code></pre></div><p>Esto nos permitirá  visualizar un contenido sencillo que se escriba en el markdown que use este layout. Para más templates se puede visitar la pagina de <a href="https://gohugo.io/templates/single-page-templates/">hugo templates single</a>.</p>
 </li>
 <li>
-<h3 id="list">List</h3>
+<h4 id="list">List</h4>
 <p>Para manejar una pagina que se visualice como la lista de otras paginas o publicaciones se puede usar el siguiente template.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">{{</span> .Content <span style="color:#f92672">}}</span>
 
@@ -304,13 +262,11 @@ usuario.</p>
 &lt;/article&gt;
 </code></pre></div><p>Esto nos permitirá  visualizar un contenido sencillo  y adicionalmente una lista de las paginas que correspondan. Para más templates se puede visitar la pagina de <a href="https://gohugo.io/templates/lists/">hugo templates list</a>.</p>
 </li>
-<li>
+</ul>
 <h3 id="partials">Partials</h3>
 <p>En los partials puede ubicar lo que considere pertinente para un header, head, footer en codigo html como lo son logos, menus e información que considere pertinente.</p>
-</li>
-</ul>
 <h2 id="static">Static</h2>
-<p>En la carpeta static se ubicaran las imagenes que necesite inlcuir en el diseño de su pagina y el documento que desee incluir para el diseño de la pagina como el formato css.</p>
+<p>En la carpeta static se ubicaran las imagenes e iconos que necesite incluir en el diseño de su pagina. También se ubica el diseño de la página (estilo) en formato css.</p>
 <h1 id="referencias">Referencias:</h1>
 <blockquote>
 <p><strong><a href="https://tygerbytes.github.io/wp2hugoref/#06-write-a-new-post-with-hugo">Migrating WordPress to Hugo: Course Reference</a></strong></p>

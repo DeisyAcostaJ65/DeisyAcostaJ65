@@ -105,7 +105,6 @@
         
 
                 
-
         
 
                 
@@ -117,51 +116,27 @@
                             <li class="submenu-vert">
                                 <a href="https://deisyacostaj65.github.io/documentacion/configtemas/readme_themezero/">Crear un tema desde cero</a>
                                 
-                            </li>
-                            
-                            <li class="submenu-vert">
+                            </li><li class="submenu-vert">
                                 <a href="https://deisyacostaj65.github.io/documentacion/configtemas/readme_copytheme/">¿Cómo añadir un tema y configurarlo?</a>
                                 
                             </li>
-                            
-                            
                         </ul>
                         
                     </li>
                     
                 
-
         
 
                 
-
         
 
                 
-
         
 
                 
-
         
 
                 
-
-        
-
-                
-                    
-                    <li class="menu-vert" id="https://deisyacostaj65.github.io/documentacion/layout/">
-                        <a href="https://deisyacostaj65.github.io/documentacion/layout/">Layouts</a>
-                        
-                        <ul class="submenu-vert-level">
-                            
-                        </ul>
-                        
-                    </li>
-                    
-                
-
         
 
                 
@@ -173,53 +148,35 @@
                             <li class="submenu-vert">
                                 <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/visualizararchivos/">Visualizar Archivos</a>
                                 
-                            </li>
-                            
-                            <li class="submenu-vert">
+                            </li><li class="submenu-vert">
                                 <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/diagramasdoc/">Diagramas con Mermaid</a>
                                 
-                            </li>
-                            
-                            <li class="submenu-vert">
+                            </li><li class="submenu-vert">
                                 <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/referenciardoc/">Referenciacion de páginas</a>
                                 
                             </li>
-                            
-                            
                         </ul>
                         
                     </li>
                     
                 
+        
 
+                
         
 
                 
                     
                     <li class="menu-vert" id="https://deisyacostaj65.github.io/documentacion/pipeline/">
-                        <a href="https://deisyacostaj65.github.io/documentacion/pipeline/">Despliegue-Pipeline</a>
+                        <a href="https://deisyacostaj65.github.io/documentacion/pipeline/">Pipeline con Azure DevOps</a>
                         
                         <ul class="submenu-vert-level">
-                            <li class="submenu-vert">
-                                <a href="https://deisyacostaj65.github.io/documentacion/pipeline/azure/">Pipeline con Azure DevOps</a>
-                                
-                            </li>
-                            
                             
                         </ul>
                         
                     </li>
                     
                 
-
-        
-
-                
-
-        
-
-                
-
         
         </ul>
 
@@ -229,7 +186,30 @@
 
         <div class="cotenido-principal">
             <main class="content">
-                <h1>Despliegue-Pipeline</h1>
+                <h1>Pipeline con Azure DevOps</h1>
+                <section>
+                    <p>Esta es una herramienta de Microsoft que cuenta con diversos servicios para trabajar con la metodología de DevOps. Para el caso de Coolibri se hace uso de Azure Repos y Azure Pipelines. A continuación se muestra el flujo que sigue el pipeline desde que se hace commit en la rama main hasta su despliegue.</p>
+
+
+
+
+
+    
+
+
+<div class="shortcode__img">
+    <img src="../../documentacion/pipeline/pipeline_cycle.png" alt="pipeline cycle">
+</div>
+
+
+
+<p>Como primer paso se almacena el repositorio de git usando azure repo. Es importante resaltar que, dado que sue hace uso de un proyecto de git se deben seguir las prácticas de gitflow para agregar nuevos commits. Así como otras herramientas para manejar repositorios como GitHub, Azure Repos tambien permite crear ramas, ver el contenido del repositorio por ramas, generar pull requests y revisarlos. 
+No es un requisito que el repositorio este en azure, se puede trabajar conectando repositorios en otros proveedor de hosting de repositorios, si es el caso la información correspondiente debe ser agregada en la sección de conexiones en configuración del proyecto (esto debe hacerlo quien tenga el rol de administrador del proyecto).</p>
+<p>El siguiente paso es el build pipeline. En este se usa un agente que se encarga de ejecutar dos tareas,  la primera tarea es <code>Hugo Generate</code> esta se encuentra en la biblioteca de tareas de azure, si nunca se ha usado es posible que sea necesario añadirla desde el marketplace antes de poder agregarla como tarea del pipeline. La segunda tarea es publicar el artefacto, este se almacena en la carpeta public del mismo repositorio en azure repo en el que se tiene el proyecto. Por facilidad se pone en el mismo repositorio, si fuera necesario es posible agregarlo a un repositorio diferente fuera de azure repos.</p>
+<p>Una vez se tiene un nuevo artefacto se activa el release pipeline. Este se encarga de ejecutar la tarea que despliega el proyecto, por el momento se tiene configurado el despliegue en github pages pero se puede escoger la herramienta preferida para hacerlo como un bucket S3 de AWS.</p>
+
+                </section>
+                
                 
                 
             </main>

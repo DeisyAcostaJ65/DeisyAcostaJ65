@@ -105,7 +105,6 @@
         
 
                 
-
         
 
                 
@@ -117,51 +116,27 @@
                             <li class="submenu-vert">
                                 <a href="https://deisyacostaj65.github.io/documentacion/configtemas/readme_themezero/">Crear un tema desde cero</a>
                                 
-                            </li>
-                            
-                            <li class="submenu-vert">
+                            </li><li class="submenu-vert">
                                 <a href="https://deisyacostaj65.github.io/documentacion/configtemas/readme_copytheme/">¿Cómo añadir un tema y configurarlo?</a>
                                 
                             </li>
-                            
-                            
                         </ul>
                         
                     </li>
                     
                 
-
         
 
                 
-
         
 
                 
-
         
 
                 
-
         
 
                 
-
-        
-
-                
-                    
-                    <li class="menu-vert" id="https://deisyacostaj65.github.io/documentacion/layout/">
-                        <a href="https://deisyacostaj65.github.io/documentacion/layout/">Layouts</a>
-                        
-                        <ul class="submenu-vert-level">
-                            
-                        </ul>
-                        
-                    </li>
-                    
-                
-
         
 
                 
@@ -173,53 +148,35 @@
                             <li class="submenu-vert">
                                 <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/visualizararchivos/">Visualizar Archivos</a>
                                 
-                            </li>
-                            
-                            <li class="submenu-vert">
+                            </li><li class="submenu-vert">
                                 <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/diagramasdoc/">Diagramas con Mermaid</a>
                                 
-                            </li>
-                            
-                            <li class="submenu-vert">
+                            </li><li class="submenu-vert">
                                 <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/referenciardoc/">Referenciacion de páginas</a>
                                 
                             </li>
-                            
-                            
                         </ul>
                         
                     </li>
                     
                 
+        
 
+                
         
 
                 
                     
                     <li class="menu-vert" id="https://deisyacostaj65.github.io/documentacion/pipeline/">
-                        <a href="https://deisyacostaj65.github.io/documentacion/pipeline/">Despliegue-Pipeline</a>
+                        <a href="https://deisyacostaj65.github.io/documentacion/pipeline/">Pipeline con Azure DevOps</a>
                         
                         <ul class="submenu-vert-level">
-                            <li class="submenu-vert">
-                                <a href="https://deisyacostaj65.github.io/documentacion/pipeline/azure/">Pipeline con Azure DevOps</a>
-                                
-                            </li>
-                            
                             
                         </ul>
                         
                     </li>
                     
                 
-
-        
-
-                
-
-        
-
-                
-
         
         </ul>
 
@@ -230,7 +187,7 @@
         <div class="cotenido-principal">
             <main class="content">
                 <h1>Referenciacion de páginas</h1>
-                <p>Esta funcion ayuda hacer la referenciacion de otras paginas por medio de rutas relativas</p>
+                <p>Esta funcion ayuda hacer la referenciacion de otras paginas pertenecientes a la misma página estática, por medio de rutas relativas. La estructura de la función se muestra a continuación:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
    <span style="color:#f92672">{{</span> &lt; referenciarDoc alt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;nombre&gt;&#34;</span> url<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/../documento&#34;</span> &gt; <span style="color:#f92672">}}</span>
 
@@ -238,7 +195,7 @@
 <h3 id="parametros">Parametros</h3>
 <p><strong>alt:</strong> Corresponde a una palabra o frase a la cual irá ligada el hipervinculo.</p>
 <p><strong>url:</strong> Corresponde a la ruta relativa que lleva al documento que se quiere referenciar.</p>
-<p>Esta funcion generara un texto en negrilla que al darle click llevara al documento deseado. Para entender mejor como encontrar los documentos, hay que tener en cuenta la estructura que tiene hugo. Tomaremos de ejemplo este directorio:</p>
+<p>Esta funcion generara un texto en negrilla que al darle click llevara al documento/página deseado. Para entender mejor como encontrar los documentos, hay que tener en cuenta la estructura que tiene hugo. Tomaremos de ejemplo este directorio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">|--documentacion
    |--pagos
       |--servicios.md
@@ -249,17 +206,18 @@
       |--soporte.md
       |--_index.md
    |--_index.html
-</code></pre></div><p>Si nos encontramos ubicados en el archivo &ldquo;_index.md&rdquo; de la carpeta de areas, y queremos citar el archivo clientes basta con poner &ldquo;/clientes.md&rdquo;, dado a que nos encontramos en el mismo directorio.</p>
+</code></pre></div><p>Si nos encontramos ubicados en el archivo &ldquo;_index.md&rdquo; del directorio &ldquo;pagos&rdquo; y queremos citar el archivo &ldquo;clientes.md&rdquo; basta con poner &ldquo;clientes.md&rdquo;, dado a que nos encontramos en el mismo directorio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
    <span style="color:#f92672">{{</span> &lt; referenciarDoc alt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;nombre&gt;&#34;</span> url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;clientes.md&#34;</span> &gt; <span style="color:#f92672">}}</span>
 
-</code></pre></div><p>Pero si se quisiera citar el documento de &ldquo;financiero.md&rdquo;, la ruta correcta sería &ldquo;../areas/financiero.md&rdquo;.</p>
+</code></pre></div><p>Pero si se desea citar el documento de &ldquo;financiero.md&rdquo; ubicado en el directorio &ldquo;areas&rdquo;, la ruta correcta sería &ldquo;../areas/financiero.md&rdquo;:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
 <span style="color:#f92672">{{</span> &lt; referenciarDoc alt<span style="color:#f92672">=</span> &lt;nombre&gt; url<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;../areas/financiero.md&#34;</span> &gt; <span style="color:#f92672">}}</span>
 
-</code></pre></div><p>Por otro lado, si nos encontramos ubicados en el archivo &ldquo;_index.md&rdquo; correspondiente a la carpeta de documentación y queremos citar el documento &ldquo;_index.md&rdquo; que se encuentra dentro del directorio de pagos, se puede hacer de dos maneras &ldquo;../areas/financiero.md&rdquo; o  &ldquo;/areas&rdquo;.</p>
+</code></pre></div><p>Se debe poner &ldquo;../&rdquo; ó &ldquo;/&rdquo; antes de la ruta para que la función pueda hacer la busqueda en directorios de más alto nivel. Si se desea retroceder más de un nivel, se debe poner &ldquo;../&rdquo; el número de niveles a retornar.</p>
+<p>Por otro lado, si nos encontramos ubicados en el archivo &ldquo;_index.md&rdquo; correspondiente al directorio &ldquo;documentacion&rdquo; y queremos citar el documento &ldquo;_index.md&rdquo; que se encuentra dentro del directorio de &ldquo;areas&rdquo;, se puede hacer de dos maneras &ldquo;../areas/_index.md&rdquo; o  &ldquo;/areas&rdquo;.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
-<span style="color:#f92672">{{</span> &lt; referenciarDoc alt<span style="color:#f92672">=</span> &lt;nombre&gt; url<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;../areas/financiero.md&#34;</span> or <span style="color:#e6db74">&#34;areas&#34;</span> &gt; <span style="color:#f92672">}}</span>
+<span style="color:#f92672">{{</span> &lt; referenciarDoc alt<span style="color:#f92672">=</span> &lt;nombre&gt; url<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;../areas/_index.md&#34;</span> or <span style="color:#e6db74">&#34;/areas&#34;</span> &gt; <span style="color:#f92672">}}</span>
 
 </code></pre></div>
                 

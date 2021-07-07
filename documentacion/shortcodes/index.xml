@@ -36,11 +36,10 @@ Para poner toda la información del diagrama, se crea un archivo .html y se incl
       <pubDate>Tue, 25 May 2021 12:09:35 -0500</pubDate>
       
       <guid>https://deisyacostaj65.github.io/documentacion/shortcodes/referenciardoc/</guid>
-      <description>Esta funcion ayuda hacer la referenciacion de otras paginas por medio de rutas relativas
+      <description>Esta funcion ayuda hacer la referenciacion de otras paginas pertenecientes a la misma página estática, por medio de rutas relativas. La estructura de la función se muestra a continuación:
 {{ &amp;lt; referenciarDoc alt=&amp;#34;&amp;lt;nombre&amp;gt;&amp;#34; url= &amp;#34;/../documento&amp;#34; &amp;gt; }} Se aclara que los símbolos {{, &amp;lt;, &amp;gt;, }} no deben tener espacios entre sí.
 Parametros alt: Corresponde a una palabra o frase a la cual irá ligada el hipervinculo.
-url: Corresponde a la ruta relativa que lleva al documento que se quiere referenciar.
-Esta funcion generara un texto en negrilla que al darle click llevara al documento deseado.</description>
+url: Corresponde a la ruta relativa que lleva al documento que se quiere referenciar.</description>
     </item>
     
   </channel>
