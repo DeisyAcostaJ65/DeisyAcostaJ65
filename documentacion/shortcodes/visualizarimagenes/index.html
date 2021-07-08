@@ -192,63 +192,39 @@
 
         <div class="cotenido-principal">
             <main class="content">
-                <h1>Visualizar Archivos</h1>
-                <p>Esta función ayuda a visualizar archivos de cualquier tipo, que pueda contener código u otro tipo de contenido que no sea imagen, tal como:</p>
-<ul>
-<li>JSON</li>
-<li>YAML</li>
-<li>TXT</li>
-<li>CSV</li>
-</ul>
-<p>La estructura de la función se muestra a continuación:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
-    <span style="color:#f92672">{{</span> &lt; dataDetails alt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;nombre&gt;&#34;</span> url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;ruta&gt;&#34;</span> &gt; <span style="color:#f92672">}}</span>
-
+                <h1>Visualización de Imágenes</h1>
+                <p>Para visualizar archivos formato imagen como GIF, JPG, JPEG, PNG, etc., se puede usar la típica notación markdown:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    !<span style="color:#f92672">[</span>&lt;Nombre imagen&gt;<span style="color:#f92672">](</span>&lt;url/ruta&gt;<span style="color:#f92672">)</span>
+</code></pre></div><p>Pero para configurar la ubicación y tamaño de la imagen se debe usar una función, cuya estructura se muestra a continuación:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#f92672">{{</span> &lt; img alt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;nombre&gt;&#34;</span> url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;ruta&gt;&#34;</span> &gt; <span style="color:#f92672">}}</span>
 </code></pre></div><p>Se aclara que los símbolos <code>{{</code>, <code>&lt;</code>, <code>&gt;</code>, <code>}}</code> no deben tener espacios entre sí, es decir, se debe escribir: {{&lt; &hellip; &gt;}}</p>
-<h3 id="parametros">Parametros</h3>
+<p>Donde por defecto ubica la imagen en la parte central del contenido. Para ajustar el tamaño, se debe cofigurar manualmente en el archivo de tipo CSS llamado &ldquo;shortcodes.css&rdquo;, cuya ruta es &ldquo;themes/static/css/template-coolibri/shortcodes.css&rdquo;, en el cual se debe llamar el nombre de la imagen, tal como se muestra a continuación:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#75715e">#Se llama la clase de la función:</span>
+    .shortcode_img <span style="color:#f92672">[</span>alt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;nombre&gt;&#34;</span><span style="color:#f92672">]</span> <span style="color:#f92672">{</span>
+        max-width: &lt;valor&gt;%;
+    <span style="color:#f92672">}</span>
+</code></pre></div><h3 id="parametros">Parametros</h3>
 <p><strong>alt:</strong> Corresponde a una palabra o frase a la cual irá ligada el archivo, puede ser el nombre del mismo.</p>
 <p><strong>url:</strong> Corresponde a la ruta relativa donde se ubica el archivo que se quiere visualizar.</p>
-<p>Esta función genera una widget de revelación a través del cual el usuario puede obtener información adicional, siendo el contenido del archivo lo que se visualiza; además cuenta con un icono para descargar el archivo si lo desea el usuario.</p>
-<p>Se tomará como ejemplo el siguiente directorio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">|--documentacion
-    |--configtemas
-        |--_index.md
-        |--README_CopyTheme.md
-        |--README_themeZero.md
-
-    |--images
-        |--hugo_logo.png
-
-    |--layout
-        |--data
-            |--html
-                |--ejemplo.html
-            |--json
-                |--marcadores1.json
-
-    |--shortcodes
-        |--data
-            |--json
-                |--colores1.json
-            |--text
-                |--marcadores.txt
-            |--yaml
-                |--discography.yaml
-        |--_index.md
-        |--referenciarDoc.md
-        |--visualizarArchivos.md
-</code></pre></div><p>Si nos encontramos ubicados en el archivo &ldquo;_index.md&rdquo; del directorio &ldquo;shortcodes&rdquo; y queremos visualizar el archivo &ldquo;colores1.json&rdquo; ubicado en la ruta &ldquo;data/json&rdquo; del mismo directorio, basta con citar el archivo indicando la ruta, dado a que nos encontramos en el mismo directorio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
-    <span style="color:#f92672">{{</span> &lt; dataDetails alt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colores 1&#34;</span> url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;data/json/colores1.json&#34;</span> &gt; <span style="color:#f92672">}}</span>
-
-</code></pre></div><p>A continuación se observa la ejecución de la función:</p>
-<p>
-
-
-
-
-
-
+<p>Para ubicar correctamente las rutas, se tomará como ejemplo el siguiente directorio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">|--pagos
+    |--contratos
+        _index.md
+    |--ecs
+        |--mapeos
+            |--index.md
+            |--productos.md
+            |--producto.png
+        |--img
+            |--plantilla.png
+            |--logo.jpeg
+            |--logoblack.jpg
+    |--_index.md
+</code></pre></div><p>Si nos encontramos ubicados en el archivo &ldquo;_index.md&rdquo; del directorio &ldquo;mapeos&rdquo; y queremos visualizar la imagen &ldquo;producto.png&rdquo; ubicado en el mismo directorio, basta con citar el archivo indicando la ruta:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#f92672">{{</span> &lt; img alt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;producto&#34;</span> url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;producto.png&#34;</span> &gt;<span style="color:#f92672">}}</span>
+</code></pre></div><p>Por otro lado, si nos encontramos en el archivo &ldquo;_index.md&rdquo; del directorio &ldquo;mapeos&rdquo; y queremos visualizar la imagen &ldquo;plantilla.png&rdquo; ubicado en el directorio &ldquo;img&rdquo;, se debe poner &ldquo;../&rdquo; ó &ldquo;/&rdquo; antes de la ruta para que la función pueda hacer la busqueda en directorios de más alto nivel. Si se desea retroceder más de un nivel, se debe poner &ldquo;../&rdquo; el número de niveles a retornar.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#f92672">{{</span> &lt; img alt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;plantilla&#34;</span> url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;../img/plantilla.png&#34;</span> &gt; <span style="color:#f92672">}}</span>
+</code></pre></div>
 
 
 
@@ -256,134 +232,12 @@
     
 
 
-<section class="shortcode__Details">
-    <details class="shortcode_ClassDetails">
-        <summary class="shortcodeDetails_text">
-            colores 1
-        </summary>
-
-        <a style="text-decoration: none;" href="../../../documentacion/shortcodes/data/json/colores1.json" download>
-            <div>
-            
-                <div class="icon">
-                    <img src="../../../icons/png/json.png">
-                </div>
-        
-                <div class="text_icon">
-                    <h3>Descargar colores 1</h3>
-                </div>
-
-            </div>
-        </a>
-
-        <div class="shortcodeDetails_file">
-            <pre>
-                <code>
-                    {
-    &#34;arrayColores&#34;: [
-        {
-            &#34;nombreColor&#34;: &#34;rojo&#34;,
-            &#34;valorHexadec&#34;: &#34;#f00&#34;
-        },
-        {
-            &#34;nombreColor&#34;: &#34;verde&#34;,
-            &#34;valorHexadec&#34;: &#34;#0f0&#34;
-        },
-        {
-            &#34;nombreColor&#34;: &#34;azul&#34;,
-            &#34;valorHexadec&#34;: &#34;#00f&#34;
-        },
-        {
-            &#34;nombreColor&#34;: &#34;cyan&#34;,
-            &#34;valorHexadec&#34;: &#34;#0ff&#34;
-        },
-        {
-            &#34;nombreColor&#34;: &#34;magenta&#34;,
-            &#34;valorHexadec&#34;: &#34;#f0f&#34;
-        },
-        {
-            &#34;nombreColor&#34;: &#34;amarillo&#34;,
-            &#34;valorHexadec&#34;: &#34;#ff0&#34;
-        },
-        {
-            &#34;nombreColor&#34;: &#34;negro&#34;,
-            &#34;valorHexadec&#34;: &#34;#000&#34;
-        }
-    ]
-}     
-                </code>
-            </pre>
-        </div>
-
-    </details>
-</section>
-</br>
-Por otro lado, si nos encontramos ubicados en el mismo archivo &ldquo;_index.md&rdquo; del directorio &ldquo;shortcodes&rdquo; y queremos visualizar el archivo &ldquo;ejemplo.html&rdquo; ubicado en el directorio &ldquo;layout&rdquo; en la ruta &ldquo;layout/data/html/ejemplo.html&rdquo;, se debe poner &ldquo;../&rdquo; ó &ldquo;/&rdquo; antes de la ruta para que la función pueda hacer la busqueda en directorios de más alto nivel. Si se desea retrodecer más de un nivel, se debe poner &ldquo;../&rdquo; el número de niveles a retornar.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
-    <span style="color:#f92672">{{</span> &lt; dataDetails alt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Ejemplo HTML&#34;</span> url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;../layout/data/html/ejemplo.html&#34;</span> &gt; <span style="color:#f92672">}}</span>
-    
-</code></pre></div><p>A continuación se observa la ejecución de la función:</p>
+<div class="shortcode__img">
+    <img src="../../../Colibri.png" alt="colibri1">
+</div>
 
 
 
-
-
-
-
-
-
-
-
-    
-
-
-<section class="shortcode__Details">
-    <details class="shortcode_ClassDetails">
-        <summary class="shortcodeDetails_text">
-            Ejemplo HTML
-        </summary>
-
-        <a style="text-decoration: none;" href="../../../documentacion/layout/data/html/ejemplo.html" download>
-            <div>
-            
-                <div class="icon">
-                    <img src="../../../icons/png/html.png">
-                </div>
-        
-                <div class="text_icon">
-                    <h3>Descargar Ejemplo HTML</h3>
-                </div>
-
-            </div>
-        </a>
-
-        <div class="shortcodeDetails_file">
-            <pre>
-                <code>
-                    &lt;html&gt;
-	&lt;head&gt;
-		&lt;title&gt;Mi página de ejemplo&lt;/title&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-	Aquí va el contenido
-	&lt;/body&gt;
-&lt;/html&gt;     
-                </code>
-            </pre>
-        </div>
-
-    </details>
-</section>
-</br>
-<h2 id="referencias">Referencias:</h2>
-<ul>
-<li>
-<p><a href="https://co.godaddy.com/blog/10-codigos-html-para-paginas-web-y-para-que-sirven/">Ejemplos HTML</a></p>
-</li>
-<li>
-<p><a href="https://www.aprenderaprogramar.com/index.php?option=com_content&amp;view=article&amp;id=957:ejemplos-json-archivo-datos-cambio-formato-convertidor-on-line-xml-a-json-y-al-reves-minificar-cu01214f&amp;catid=83&amp;Itemid=212">Ejemplos JSON</a></p>
-</li>
-</ul>
 
                 
             </main>

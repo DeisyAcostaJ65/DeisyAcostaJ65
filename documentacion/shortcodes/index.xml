@@ -15,7 +15,7 @@
       <guid>https://deisyacostaj65.github.io/documentacion/shortcodes/visualizararchivos/</guid>
       <description>Esta función ayuda a visualizar archivos de cualquier tipo, que pueda contener código u otro tipo de contenido que no sea imagen, tal como:
  JSON YAML TXT CSV  La estructura de la función se muestra a continuación:
-{{ &amp;lt; dataDetails alt=&amp;#34;&amp;lt;nombre&amp;gt;&amp;#34; url=&amp;#34;&amp;lt;&amp;gt;&amp;#34; &amp;gt; }} Se aclara que los símbolos {{, &amp;lt;, &amp;gt;, }} no deben tener espacios entre sí.
+{{ &amp;lt; dataDetails alt=&amp;#34;&amp;lt;nombre&amp;gt;&amp;#34; url=&amp;#34;&amp;lt;ruta&amp;gt;&amp;#34; &amp;gt; }} Se aclara que los símbolos {{, &amp;lt;, &amp;gt;, }} no deben tener espacios entre sí, es decir, se debe escribir: {{&amp;lt; &amp;hellip; &amp;gt;}}
 Parametros alt: Corresponde a una palabra o frase a la cual irá ligada el archivo, puede ser el nombre del mismo.</description>
     </item>
     
@@ -31,15 +31,25 @@ Para poner toda la información del diagrama, se crea un archivo .html y se incl
     </item>
     
     <item>
-      <title>Referenciacion de páginas</title>
+      <title>Referenciación de páginas</title>
       <link>https://deisyacostaj65.github.io/documentacion/shortcodes/referenciardoc/</link>
       <pubDate>Tue, 25 May 2021 12:09:35 -0500</pubDate>
       
       <guid>https://deisyacostaj65.github.io/documentacion/shortcodes/referenciardoc/</guid>
       <description>Esta funcion ayuda hacer la referenciacion de otras paginas pertenecientes a la misma página estática, por medio de rutas relativas. La estructura de la función se muestra a continuación:
-{{ &amp;lt; referenciarDoc alt=&amp;#34;&amp;lt;nombre&amp;gt;&amp;#34; url= &amp;#34;/../documento&amp;#34; &amp;gt; }} Se aclara que los símbolos {{, &amp;lt;, &amp;gt;, }} no deben tener espacios entre sí.
-Parametros alt: Corresponde a una palabra o frase a la cual irá ligada el hipervinculo.
-url: Corresponde a la ruta relativa que lleva al documento que se quiere referenciar.</description>
+{{ &amp;lt; referenciarDoc alt=&amp;#34;&amp;lt;nombre&amp;gt;&amp;#34; url= &amp;#34;/../documento&amp;#34; &amp;gt; }} Se aclara que los símbolos {{, &amp;lt;, &amp;gt;, }} no deben tener espacios entre sí, es decir, se debe escribir: {{&amp;lt; &amp;hellip; &amp;gt;}}
+Parametros alt: Corresponde a una palabra o frase a la cual irá ligada el hipervinculo.</description>
+    </item>
+    
+    <item>
+      <title>Visualización de Imágenes</title>
+      <link>https://deisyacostaj65.github.io/documentacion/shortcodes/visualizarimagenes/</link>
+      <pubDate>Tue, 25 May 2021 12:09:35 -0500</pubDate>
+      
+      <guid>https://deisyacostaj65.github.io/documentacion/shortcodes/visualizarimagenes/</guid>
+      <description>Para visualizar archivos formato imagen como GIF, JPG, JPEG, PNG, etc., se puede usar la típica notación markdown:
+![&amp;lt;Nombre imagen&amp;gt;](&amp;lt;url/ruta&amp;gt;) Pero para configurar la ubicación y tamaño de la imagen se debe usar una función, cuya estructura se muestra a continuación:
+{{ &amp;lt; img alt=&amp;#34;&amp;lt;nombre&amp;gt;&amp;#34; url=&amp;#34;&amp;lt;ruta&amp;gt;&amp;#34; &amp;gt; }} Se aclara que los símbolos {{, &amp;lt;, &amp;gt;, }} no deben tener espacios entre sí, es decir, se debe escribir: {{&amp;lt; &amp;hellip; &amp;gt;}}</description>
     </item>
     
   </channel>

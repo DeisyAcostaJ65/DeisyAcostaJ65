@@ -140,6 +140,9 @@
         
 
                 
+        
+
+                
                     
                     <li class="menu-vert" id="https://deisyacostaj65.github.io/documentacion/shortcodes/">
                         <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/">Shortcodes </a>
@@ -152,7 +155,10 @@
                                 <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/diagramasdoc/">Diagramas con Mermaid</a>
                                 
                             </li><li class="submenu-vert">
-                                <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/referenciardoc/">Referenciacion de páginas</a>
+                                <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/referenciardoc/">Referenciación de páginas</a>
+                                
+                            </li><li class="submenu-vert">
+                                <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/visualizarimagenes/">Visualización de Imágenes</a>
                                 
                             </li>
                         </ul>
@@ -188,8 +194,19 @@
             <main class="content">
                 <h1>Shortcodes </h1>
                 <section>
-                    <p>Para poder realizar una mejor documentación coolibri cuenta con unos shortcodes que permite la referenciacion de otras paginas, generar diagramas con código, y la visualización y descarga de archivos json, yaml, csv. Estos cuentan con una notación en GO que puede ser diferente y nueva para quienes estan acostumbrados a la notación de Markdown.</p>
-<p>Aún así no es necesario que el usuario tenga conocimiento de la notación en GO, pudiendo usar la típica notación en markdown ya que Coolibri cuenta con un proceso el cual de forma automática realiza el cambio de sintaxis a notación GO para poder realizar la ejecución de la página estática.</p>
+                    <p>Para poder realizar una mejor documentación Coolibri cuenta con unos shortcodes ubicados en la ruta <code>themes/layouts/shortcodes</code> que permite la referenciación de otras paginas, generar diagramas con código, y la visualización y descarga de archivos json, yaml, csv, etc. Estos cuentan con una notación en GO que puede ser diferente y nueva para quienes estan acostumbrados a la notación de Markdown.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    |--themes
+        |--archetypes
+        |--layouts
+            |--_default
+            |--partials
+            |--shortcodes
+                |--dataDetails.html
+                |--DiagramaGBS.html
+                |--img.html
+                |--referenciarDoc.html
+            ...
+</code></pre></div><p>Aún así no es necesario que el usuario tenga conocimiento de la notación en GO, pudiendo usar la típica notación en markdown ya que Coolibri cuenta con un proceso el cual de forma automática realiza el cambio de sintaxis a notación GO para poder realizar la ejecución de la página estática.</p>
 
                 </section>
                 
@@ -214,7 +231,15 @@
                 <article class="post-snippet">
                     <h3>
                         
-                        <a style="text-decoration:none; color:black" href="../../documentacion/shortcodes/referenciardoc/">Referenciacion de páginas</a>
+                        <a style="text-decoration:none; color:black" href="../../documentacion/shortcodes/referenciardoc/">Referenciación de páginas</a>
+
+                    </h3>
+                </article>
+                
+                <article class="post-snippet">
+                    <h3>
+                        
+                        <a style="text-decoration:none; color:black" href="../../documentacion/shortcodes/visualizarimagenes/">Visualización de Imágenes</a>
 
                     </h3>
                 </article>

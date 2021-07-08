@@ -28,6 +28,14 @@ div .mermaid {
     max-width: 30%;
 }
 
+.shortcode__img [alt="Hugo Theme"] {
+    max-width: 60%;
+}
+
+.shortcode__img [alt="colibri1"] {
+    max-width: 20%;
+}
+
 /*shortcode referenciarDoc*/
 .shortcode__referenciarDoc {
     margin: 0;

@@ -140,6 +140,9 @@
         
 
                 
+        
+
+                
                     
                     <li class="menu-vert" id="https://deisyacostaj65.github.io/documentacion/shortcodes/">
                         <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/">Shortcodes </a>
@@ -152,7 +155,10 @@
                                 <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/diagramasdoc/">Diagramas con Mermaid</a>
                                 
                             </li><li class="submenu-vert">
-                                <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/referenciardoc/">Referenciacion de páginas</a>
+                                <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/referenciardoc/">Referenciación de páginas</a>
+                                
+                            </li><li class="submenu-vert">
+                                <a href="https://deisyacostaj65.github.io/documentacion/shortcodes/visualizarimagenes/">Visualización de Imágenes</a>
                                 
                             </li>
                         </ul>
@@ -186,12 +192,12 @@
 
         <div class="cotenido-principal">
             <main class="content">
-                <h1>Referenciacion de páginas</h1>
+                <h1>Referenciación de páginas</h1>
                 <p>Esta funcion ayuda hacer la referenciacion de otras paginas pertenecientes a la misma página estática, por medio de rutas relativas. La estructura de la función se muestra a continuación:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
    <span style="color:#f92672">{{</span> &lt; referenciarDoc alt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;nombre&gt;&#34;</span> url<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/../documento&#34;</span> &gt; <span style="color:#f92672">}}</span>
 
-</code></pre></div><p>Se aclara que los símbolos <code>{{</code>, <code>&lt;</code>, <code>&gt;</code>, <code>}}</code> no deben tener espacios entre sí.</p>
+</code></pre></div><p>Se aclara que los símbolos <code>{{</code>, <code>&lt;</code>, <code>&gt;</code>, <code>}}</code> no deben tener espacios entre sí, es decir, se debe escribir: {{&lt; &hellip; &gt;}}</p>
 <h3 id="parametros">Parametros</h3>
 <p><strong>alt:</strong> Corresponde a una palabra o frase a la cual irá ligada el hipervinculo.</p>
 <p><strong>url:</strong> Corresponde a la ruta relativa que lleva al documento que se quiere referenciar.</p>
