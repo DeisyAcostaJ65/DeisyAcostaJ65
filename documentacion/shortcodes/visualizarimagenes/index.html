@@ -194,16 +194,16 @@
             <main class="content">
                 <h1>Visualización de Imágenes</h1>
                 <p>Para visualizar archivos formato imagen como GIF, JPG, JPEG, PNG, etc., se puede usar la típica notación markdown:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
     !<span style="color:#f92672">[</span>&lt;Nombre imagen&gt;<span style="color:#f92672">](</span>&lt;url/ruta&gt;<span style="color:#f92672">)</span>
 
 </code></pre></div><p>Pero para configurar la ubicación y tamaño de la imagen se debe usar una función, cuya estructura se muestra a continuación:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
     <span style="color:#f92672">{{</span> &lt; img alt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;nombre&gt;&#34;</span> url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;ruta&gt;&#34;</span> &gt; <span style="color:#f92672">}}</span>
 
 </code></pre></div><p>Se aclara que los símbolos <code>{{</code>, <code>&lt;</code>, <code>&gt;</code>, <code>}}</code> no deben tener espacios entre sí, es decir, se debe escribir: {{&lt; &hellip; &gt;}}</p>
 <p>Donde por defecto ubica la imagen en la parte central del contenido. Para ajustar el tamaño, se debe cofigurar manualmente en el archivo de tipo CSS llamado &ldquo;shortcodes.css&rdquo;, cuya ruta es &ldquo;themes/static/css/template-coolibri/shortcodes.css&rdquo;, en el cual se debe llamar el nombre de la imagen, tal como se muestra a continuación:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#75715e">#Se llama la clase de la función:</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#75715e">#Se llama la clase de la función:</span>
     .shortcode_img <span style="color:#f92672">[</span>alt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;nombre&gt;&#34;</span><span style="color:#f92672">]</span> <span style="color:#f92672">{</span>
         max-width: &lt;valor&gt;%;
     <span style="color:#f92672">}</span>
@@ -211,7 +211,7 @@
 <p><strong>alt:</strong> Corresponde a una palabra o frase a la cual irá ligada el archivo, puede ser el nombre del mismo.</p>
 <p><strong>url:</strong> Corresponde a la ruta relativa donde se ubica el archivo que se quiere visualizar.</p>
 <p>Para ubicar correctamente las rutas, se tomará como ejemplo el siguiente directorio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">|--pagos
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">|--pagos
     |--contratos
         _index.md
     |--ecs
@@ -225,11 +225,11 @@
             |--logoblack.jpg
     |--_index.md
 </code></pre></div><p>Si nos encontramos ubicados en el archivo &ldquo;_index.md&rdquo; del directorio &ldquo;mapeos&rdquo; y queremos visualizar la imagen &ldquo;producto.png&rdquo; ubicado en el mismo directorio, basta con citar el archivo indicando la ruta:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
     <span style="color:#f92672">{{</span> &lt; img alt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;producto&#34;</span> url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;producto.png&#34;</span> &gt;<span style="color:#f92672">}}</span>
 
 </code></pre></div><p>Por otro lado, si nos encontramos en el archivo &ldquo;_index.md&rdquo; del directorio &ldquo;mapeos&rdquo; y queremos visualizar la imagen &ldquo;plantilla.png&rdquo; ubicado en el directorio &ldquo;img&rdquo;, se debe poner &ldquo;../&rdquo; ó &ldquo;/&rdquo; antes de la ruta para que la función pueda hacer la busqueda en directorios de más alto nivel. Si se desea retroceder más de un nivel, se debe poner &ldquo;../&rdquo; el número de niveles a retornar.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
     <span style="color:#f92672">{{</span> &lt; img alt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;plantilla&#34;</span> url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;../img/plantilla.png&#34;</span> &gt; <span style="color:#f92672">}}</span>
     
 </code></pre></div>

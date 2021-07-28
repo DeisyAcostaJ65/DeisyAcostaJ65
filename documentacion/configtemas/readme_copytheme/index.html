@@ -196,14 +196,14 @@
                 <p>En primer lugar, se debe instalar Hugo. A continuación se muestra las opciones de instalación para Windows.</p>
 <h3 id="chocolatey">Chocolatey:</h3>
 <p>Si cuenta con el gestor de paquetes <strong><a href="https://chocolatey.org/install">Chocolatey</a></strong>, puede instalar Hugo con la siguiente línea de comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    choco install hugo -confirm
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    choco install hugo -confirm
 </code></pre></div><p>O si usará archivos Sass/SCSS requiere la versión extendida:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    choco install hugo-extended -confirm
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    choco install hugo-extended -confirm
 </code></pre></div><h3 id="scoop">Scoop</h3>
 <p>Si cuenta con el gestor de paquetes <strong><a href="https://scoop.sh">Scoop</a></strong>, puede instalar Hugo con la siguiente línea de comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    scoop install hugo
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    scoop install hugo
 </code></pre></div><p>O si usará archivos Sass/SCSS requiere la versión extendida:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    scoop install hugo-extended
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    scoop install hugo-extended
 </code></pre></div><p><em><strong>Si no tiene Windows</strong></em>, puede revisar la página oficial de Hugo para las respectivas instalaciones:
 <strong><a href="https://gohugo.io/getting-started/installing/">Instalar Hugo</a></strong></p>
 <h2 id="ahora-si-volviendo-a-los-temas">Ahora si, volviendo a los temas:</h2>
@@ -222,30 +222,30 @@
 <li>
 <p>Método submodule</p>
 <p>Estando en la carpeta raíz del proyecto, se ejecuta lo siguiente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    git submodule add &lt;ssh/https url github&gt; themes/&lt;nombre nuevo tema&gt; 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    git submodule add &lt;ssh/https url github&gt; themes/&lt;nombre nuevo tema&gt; 
 </code></pre></div><p>Este método no se recomienda ya que copia la subcarpeta al repositorio vacía, copiando solo el archivo localmente.</p>
 </li>
 <li>
 <p>Método clone</p>
 <p>Estando en la carpeta raíz del proyecto, se ejecuta lo siguiente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    git clone --depth <span style="color:#ae81ff">1</span>  &lt;ssh/https url github&gt; themes/&lt;nombre nuevo tema&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    git clone --depth <span style="color:#ae81ff">1</span>  &lt;ssh/https url github&gt; themes/&lt;nombre nuevo tema&gt;
 </code></pre></div><p>Luego borrar el directorio .git</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    rm -Recurse -Force themes/&lt;nombre nuevo tema&gt;/.git
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    rm -Recurse -Force themes/&lt;nombre nuevo tema&gt;/.git
 </code></pre></div></li>
 </ul>
 </li>
 </ol>
 <p>Ya agregado el tema, en el proyecto raiz se debe hacer una configuración para especificar el uso del tema. Esto se realiza dentro del archivo <code>config.toml</code> y se debe agregar las siguientes lineas de código:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    ---
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    ---
     baseURL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&lt;URL deseada&gt;&#34;</span>
     languageCode <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;en-us&#34;</span>  <span style="color:#75715e">#idioma</span>
     title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&lt;Titulo&gt;&#34;</span>
     theme <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&lt;Nombre asignado al tema clonado&gt;&#34;</span>
     ---
 </code></pre></div><p>Para crear un nuevo Post se debe ejecutar el siguiente comando en el directorio raíz:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    hugo new content/&lt;nombre&gt;.md 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    hugo new content/&lt;nombre&gt;.md 
 </code></pre></div><p>Observará un nuevo archivo markdown con el nombre que se asignó donde se deben agregar las siguientes lineas en el encabezado, en el caso de no contenerlas:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    ---
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    ---
     title: <span style="color:#e6db74">&#34;&lt;Nombre deseado&gt;&#34;</span>
     date: 2021-04-22T00:22:40-05:00  <span style="color:#75715e">#Actualizar fecha</span>
     draft: false
@@ -256,7 +256,7 @@
     ---
 </code></pre></div><p>Teniendo en cuenta que si el draft esta en &ldquo;false&rdquo; la página se va a actualizar automaticamente sin la necesidad de ejecutar códigos de hugo para construir la página.</p>
 <p>Ya para ejecutar la página y poder visualizarla junto con el tema seleccionado, se ejecuta el siguiente comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    hugo server -D
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    hugo server -D
 </code></pre></div><p>Para configuraciones adicionales consultar la página de <strong><a href="https://gohugo.io/">Hugo</a></strong></p>
 <h1 id="referencias">Referencias:</h1>
 <blockquote>

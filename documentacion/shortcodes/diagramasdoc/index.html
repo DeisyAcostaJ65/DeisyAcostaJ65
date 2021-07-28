@@ -195,10 +195,10 @@
                 <h1>Diagramas con Mermaid</h1>
                 <p>Mermaid es una herramienta que permite crear diferentes tipos de diagramas y gráficos usando texto y código de manera sencilla por su lenguaje similar al formato MarkDown.</p>
 <p>Para poner toda la información del diagrama, se crea un archivo .html y se incluyen los siguientes comandos para inicializar mermaid:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&lt;script src<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js&#34;</span>&gt;&lt;/script&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&lt;script src<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js&#34;</span>&gt;&lt;/script&gt;
 &lt;script&gt; mermaid.initialize<span style="color:#f92672">({</span>startOnLoad:true<span style="color:#f92672">})</span>; &lt;/script&gt;
 </code></pre></div><p>Lo siguiente es agrupar el contenido donde se va a crear el diagrama, se tiene que especificar el tipo de gráfico que se va a realizar para luego agregar la información de este.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&lt;div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mermaid&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&lt;div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mermaid&#34;</span>&gt;
 
     comando tipo de gráfico
               
@@ -257,7 +257,7 @@
 <p>Para tener la información más detallada sobre como seguir editando los diagramas, puede encontrar mayor información en este <strong><a href="https://mermaid-js.github.io/mermaid/#/">link</a></strong></p>
 <p>Cabe resaltar que los diagramas se pueden editar tambien en cuanto a cambio de colores, tamaños, incluir links, entre otras acciones.</p>
 <p>Despues de tener el archivo html con el diagrama finalizado, bastará con ser &ldquo;llamado&rdquo; en un archivo MarkDown para poder ser visualizado de la sigueinte manera:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
      <span style="color:#f92672">{{</span> &lt; NombreArchivoHTML &gt; <span style="color:#f92672">}}</span>
      
 </code></pre></div><p>Se aclara que los símbolos <code>{{</code>, <code>&lt;</code>, <code>&gt;</code>, <code>}}</code> no deben tener espacios entre sí, es decir, se debe escribir: {{&lt; &hellip; &gt;}}</p>

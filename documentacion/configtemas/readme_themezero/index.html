@@ -194,9 +194,9 @@
             <main class="content">
                 <h1>Crear un tema desde cero</h1>
                 <p>Para empezar crear un tema se debe usar el comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">   hugo new theme &lt;Nombre_del_tema&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">   hugo new theme &lt;Nombre_del_tema&gt;
 </code></pre></div><p>Este comando creará una carpeta con el nombre deseado en la carpeta themes con los siquientes directorios</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">|--themes
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">|--themes
    |--&lt;Nombre_del_tema&gt;
       |--archetypes
       |--layouts
@@ -206,7 +206,7 @@
 </code></pre></div><p>De los cuales archetypes, layouts y static corresponden a carpetas.</p>
 <h2 id="archetypes">Archetypes</h2>
 <p>El primero archetypes, corresponde a una carpeta donde se alojarán plantillas del forntmatter de los markdown que se creen más adelante.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">---
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">---
 title: <span style="color:#e6db74">&#34;{{ replace .Name &#34;</span>-<span style="color:#e6db74">&#34; &#34;</span> <span style="color:#e6db74">&#34; | title }}&#34;</span>
 date: <span style="color:#f92672">{{</span> .Date <span style="color:#f92672">}}</span>
 draft: true
@@ -215,7 +215,7 @@ draft: true
 usuario.</p>
 <h2 id="layouts">Layouts</h2>
 <p>Seguido a esto nos encontramos con la carpeta layout que tiene la siguiente organizacion:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">|--layouts
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">|--layouts
    |--_default
       |--baseof.html
       |--list.html
@@ -232,7 +232,7 @@ usuario.</p>
 <li>
 <h4 id="baseof">Baseof</h4>
 <p>Entendiendo como funciona el baseof, al abrirlo se puede observar la siguiente estructura.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&lt;!DOCTYPE html&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
    <span style="color:#f92672">{{</span>- partial <span style="color:#e6db74">&#34;head.html&#34;</span> . -<span style="color:#f92672">}}</span>
    &lt;body&gt;
@@ -248,7 +248,7 @@ usuario.</p>
 <li>
 <h4 id="single">Single</h4>
 <p>Para manejar una pagina que funcione como una sola se puede usar la siguiente plantilla.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">{{</span> define <span style="color:#e6db74">&#34;main&#34;</span> <span style="color:#f92672">}}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">{{</span> define <span style="color:#e6db74">&#34;main&#34;</span> <span style="color:#f92672">}}</span>
 &lt;main class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;content&#34;</span>&gt;
    <span style="color:#f92672">{{</span> .Content <span style="color:#f92672">}}</span>
 &lt;/main&gt;
@@ -258,7 +258,7 @@ usuario.</p>
 <li>
 <h4 id="list">List</h4>
 <p>Para manejar una pagina que se visualice como la lista de otras paginas o publicaciones se puede usar el siguiente template.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">{{</span> .Content <span style="color:#f92672">}}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">{{</span> .Content <span style="color:#f92672">}}</span>
 
 <span style="color:#f92672">{{</span> range.Data.Pages <span style="color:#f92672">}}</span>
 &lt;article class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-snippet&#34;</span>&gt;
