@@ -224,6 +224,91 @@
 <p><strong>resources:</strong> Este contiene varios activos como estilos y scripts.</p>
 <p><strong>themes:</strong> Almacena los temas y estilos de la página estática.</p>
 <p><strong>config.toml:</strong> Archivo de configuración de Hugo. Puede estar en formato TOML, YAML y JSON.</p>
+<h2 id="errores-comunes-en-hugo">Errores comunes en HUGO</h2>
+<p><strong>Nombres de carpetas del proyecto</strong></p>
+<p>Las carpetas pertenecientes al proyecto Hugo deben estar en minúscula, como se muestra a continuación:</p>
+
+
+
+
+
+    
+
+
+<div class="shortcode__img">
+    <img src="../documentacion/carp_ex.PNG" alt="carpetas_example">
+</div>
+
+
+
+<p>Las carpetas de la imagen anterior se encuentran en minúscula, como home, archetypes, content, resources, entre otros. Por experiencia propia de los desarrolladores del Proyecto Coolibri, se realiza de esta manera para evitar que se generen errores al momento de generar el sitio de Hugo.</p>
+<p>Este error, se encuentra directamente relacionado con la sintaxis o configuración de Hugo. Por lo que, se recomienda crear las carpetas con las especificaciones dadas.</p>
+<p><strong>Escritura markdown del proyecto</strong></p>
+<p>Los archivos markdown pertenecientes al proyecto Hugo se recomienda nombrarlos en minúscula, como se muestra a continuación:</p>
+
+
+
+
+
+    
+
+
+<div class="shortcode__img">
+    <img src="../documentacion/mkdwn_ex.PNG" alt="mkdwn_example">
+</div>
+
+
+
+<p>Los archivos markdown (md) en la imagen anterior se encuentran en minúscula, lo que permite evitar errores al momento de generar el sitio de Hugo. Igualmente, se observa que esta el archivo markdown principal con el nombre index y los archivos markdown secundarios con los nombres java, junit, linux y maven. Es importante, realizar la distinción entre el archivo principal y los archivos secundarios, ya que solo el archivo principal se debe llamar index.md para que no genere conflicto con los demás archivos markdown al momento de generar el sitio de Hugo.</p>
+<p>Por experiencia propia, en la carpeta de cursos se tenia el archivo principal index.md y los archivos secundarios estaban nombrados como _indexJava.md, _indexJunit.md, _indexLinux.md, _indexMaven.md. De esa manera, al momento de generar el sitio Hugo en el servidor de GitHub, provoca el siguiente error:</p>
+
+
+
+
+
+    
+
+
+<div class="shortcode__img">
+    <img src="../documentacion/404_ex.PNG" alt="404_example">
+</div>
+
+
+
+<p>Este error, se encuentra directamente relacionado con la sintaxis o configuración de Hugo. Por lo que, se recomienda crear los archivos markdown con las especificaciones dadas.</p>
+<p><strong>Configurar config.toml</strong></p>
+<p>El archivo config.toml se configura dependiendo del numero de menús verticales que se requieran en la página de Hugo. En la siguiente imagen, se tiene el menú principal y el menú documentación:</p>
+
+
+
+
+
+    
+
+
+<div class="shortcode__img">
+    <img src="../documentacion/docum_ex.PNG" alt="documentacion_example">
+</div>
+
+
+
+<p>La forma de configurar el archivo .toml es la siguiente:</p>
+
+
+
+
+
+    
+
+
+<div class="shortcode__img">
+    <img src="../documentacion/configtoml_ex.PNG" alt="configtoml_example">
+</div>
+
+
+
+<p>Cada carpeta vertical debe contar con un identificador, un nombre, una URL y un peso. El identificador hace referencia al titulo dado en el _index de la carpeta home, en este caso COOLIBRI y al titulo dado al _index.md de la carpeta documentación. El nombre hace referencia a como aparece en la página de Hugo, en este caso “Principal” y “Documentación”. La URL hace referencia en que dirección o carpeta dentro del proyecto Hugo se encuentra el respectivo archivo _index.md. Finalmente, el peso esta relacionado con la importancia del menú vertical. El menú vertical “Principal” tiene mayor peso que el menú “Documentación”. Por lo que, al momento de desplegar la página, se observara primero aparecerá primero el menú “Principal”.</p>
+<p>Siguiendo las indicaciones mencionadas anteriormente, se evita presentar inconvenientes al momento de generar el sitio de Hugo.</p>
 <h1 id="referencias">Referencias:</h1>
 <ul>
 <li><a href="https://www.sitepoint.com/premium/books/a-beginner-s-guide-to-creating-a-static-website-with-hugo/read/1/">A Beginner’s Guide to Creating a Static Website with Hugo</a></li>
